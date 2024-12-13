@@ -1,4 +1,103 @@
 # 공부일지 (240723 - 241220)
+## 241211
+### react
+- 리액트 스와이퍼 적용하기
+1. npm i swiper 인스톨
+2. npm i sass 인스톨 (다운받은거 확인하려면 package.json 파일 확인)
+3. 스와이퍼에 이미지 첨부
+   1) assets에 img를 가져오려면 import로 불러와야함 그리고 img태그에 참조변수 사용
+   2) public에 img를 가져오려면 {process.env.PUBLIC_URL + "절대경로"}로 사용 
+   3) const path = process.env.PUBLIC_URL {path(변수명) + "절대경로"}도 사용가능 
+   4) background-image scss에 작성 (중첩 작성가능)
+       assets이미지 파일을  background: url(../assets/images/bg4.png); 작성
+   5) 플러그인의 버튼 변경시 변수를 가져와 변경
+       --swiper-theme-color: orange;
+4. build해서 github에 올리기
+   1) 컨트롤 + C 눌러 작업 종료
+   2) 해당되는 경로에서  npm run build
+   3) build index.html 경로 수정
+   4) build폴더만 github에 업로드
+
+## 241210
+### react
+- 리액트 웹앱 만들기 연습
+1. 컴포넌트 만들어 웹 페이지 만들기
+2. npm run build입력 하여 git에 올릴 수 있게함
+3. build에 index파일 경로 수정하기
+3. git에 업로드하기
+
+## 241209
+### react
+- react 사용방법 복습
+1. 폴더 만들기
+2. basic 파일 복사해서 붙여넣기
+3. 터미널 cmd 오픈
+4. 폴더로 경로 이동
+5. npm i 로 인스톨
+6. 인스톨 완료후 npm start 가상서버 오픈
+
+- assets style 적용 방법 
+1. src폴더 안에 assets생성
+2. 적용할 font index.css안에 @import url(); 작성
+3. StyleModule.jsx 생성
+4. 적용할 css "import styles from './StyleModule.module.css';" imprt 변수 from url 작성
+5. return 안에  <section className={styles.wrapper}> 변수+적용할 css 스타일 작성
+6. style 여러개 적용시   
+   1) className={`${styles.bg} ${styles.fontSize}`}
+   2) className={`styles.listStyle ${styles.underline}`} 
+   3) className={[styles.listStyle, styles.underline].join(" ")}
+7. css에 :global 작성 모든 페이지에서 사용가능 일반 css문서 적용방법처럼 사용
+
+- SCSS 스타일 적용
+1. 파일명.scss / 파일명.module.scss
+2. 변수 작성시 $변수명 : style; / 지역변수 스타일 안에 작성
+3. jsx 파일에 import styles from "./SCSS.module.scss"; 작성
+4. return 안에  <section className={styles.wrapper}> 변수+적용할 css 스타일
+5. 터미널에서 npm i sass 입력해서 설치
+6. npm start 입력
+
+- 하위 스타일 적용
+1. .wrapper .title {} -> .wrapper { .title {} }
+2. hover적용시 스타일 중가로 안에 $:hover 작성
+
+- styled-components
+1. 터미널에서 npm install styled-components 패키지 설치
+2. 적용방법
+   1) const 컴포넌트명 = styled(참조변수명).태그명`css 적용값`;
+   2) const 컴포넌트명 = styled.('태그명')`css 적용값`;
+3. ainmation 적용방법
+   1) 실행 컴포넌트 앞에 작성
+   2) const mov = keyframes`css 작성 방법과 같음`;
+
+##241206
+## react
+- set함수를 이용하여 데이터 업데이트에 대해 배웠다.
+
+## 241205
+### react
+1. vscode 터미널 열기 cmd ( command prompt)
+2. npx create-react-app 폴더이름 입력
+3. 만들어진 폴더에 들어가서 npm start 입력
+4. readme파일, 삭제
+5. App.js 안에 내용지우고 "rs"' 단축키 사용(reactjs code snippets 설치)
+6. return 안에 내용 작성
+7. src 안에 components폴더 생성 StyleCom1.jsx 생성
+8. 작성한 파일은 App.js에 연결 
+   1) JS영역에 import StyleCom1 from './components/StyleCom1'; 작성
+   2) JSX영역에 <StyleCom1 />작성
+
+- JSX 문법 삼항연산자 논리연산자에 대해 배웠다
+
+## 241204
+### react
+- 노드파일설치와 프롬프트로 확인하는 방법을 배웠다.
+- 리액트 파일설치와 vscode에서 작성 방법에 대해 배웠다.
+
+## 241203
+### react
+- kakaoAPI를 이용하여 데이터를 가져오고 출력하는것에 대해 배웠다. 
+- 구조분해할당, map, 삼항연산자, 단락회로평가, filter, spread연산자에 대해 배웠다.
+
 ## 241202
 ### react
 - JSON에 대해 배웠다.
